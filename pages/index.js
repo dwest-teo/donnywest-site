@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Head from 'next/head';
-import App from '../components/layouts/app';
-import Heading from '../components/elements/heading';
+import App from '../components/app/app';
+import Heading from '../components/heading';
 
 const data = {
   heading: 'I\'m Donny West.',

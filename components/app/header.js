@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import Anchor from '../elements/anchor';
+import Anchor from '../anchor';
 
 const Header = props => {
   const { component } = props;

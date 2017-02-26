@@ -1,4 +1,3 @@
-/* eslint max-len: 0 */
 const simDb = {
   about: {
     component: 'ABOUT',
@@ -61,11 +60,10 @@ const simDb = {
     heading: 'Projects',
     projects: [
       {
-        title: 'The Elegant Office',
-        p: 'My day job - a complete custom e-commerce application and ecosystem.  The Elegant Office uses a custom React/Redux front-end application, with a smart API surface that decouples the backend, making it platform-agnostic.  The site currently runs on the Bigcommerce platform, and features a number of notable "firsts" and unique integrations.',
+        heading: 'The Elegant Office',
+        text: 'My day job - a complete custom e-commerce application and ecosystem.  The Elegant Office uses a custom React/Redux front-end application, with a smart API surface that decouples the backend, making it platform-agnostic.  The site currently runs on the Bigcommerce platform, and features a number of notable "firsts" and unique integrations.',
         link: {
           href: 'https://www.theelegantoffice.com/',
-          title: 'TheElegantOffice.com',
           img: '/static/images/teo-ss.jpg',
           imgLg: '/static/images/teo-ss-lg.jpg',
         },
@@ -73,11 +71,10 @@ const simDb = {
         notable: 'First Bigcommerce store using a React SPA, custom integrations with Algolia, Yotpo, Netsuite, imgix, ZMags, and more',
       },
       {
-        title: 'Donny West',
-        p: 'The site you\'re browsing at this very moment.  It\'s a simple enough site, but there\'s a modern tech stack behind it working to make it fast, responsive, and readable.  A custom Go server and React + Redux front-end application make this site vastly more complex than it needs to be, but it\'s all in good fun.',
+        heading: 'Donny West',
+        text: 'The site you\'re browsing at this very moment.  It\'s a simple enough site, but there\'s a modern tech stack behind it working to make it fast, responsive, and readable.  A custom Go server and React + Redux front-end application make this site vastly more complex than it needs to be, but it\'s all in good fun.',
         link: {
           href: '/',
-          title: 'DonnyWest.com',
           img: '/static/images/dw-ss.jpg',
           imgLg: '/static/images/dw-ss-lg.jpg',
         },
@@ -85,11 +82,10 @@ const simDb = {
         notable: 'The only officially authorized Donny West website in the world',
       },
       {
-        title: 'Brink Commerce',
-        p: 'A simple static site/landing page.  This site was built from the ground-up for performance, using vanilla JavaScript and SASS only, no frameworks.  It\'s basic and minimal, and exceeded all performance goals.',
+        heading: 'Brink Commerce',
+        text: 'A simple static site/landing page.  This site was built from the ground-up for performance, using vanilla JavaScript and SASS only, no frameworks.  It\'s basic and minimal, and exceeded all performance goals.',
         link: {
           href: 'https://brinkcommerce.com/',
-          title: 'BrinkCommerce.com',
           img: '/static/images/brink-ss.jpg',
           imgLg: '/static/images/brink-ss-lg.jpg',
         },
@@ -97,11 +93,10 @@ const simDb = {
         notable: 'It\'s really, really fast',
       },
       {
-        title: 'slim-stencil-tools',
-        p: 'A lightweight and modern alternative utility library for the Bigcommerce Stencil theme framework.  This is a lean, performance-oriented replacement for Bigcommerce\'s standard library that removes third-party dependencies like jQuery.',
+        heading: 'slim-stencil-tools',
+        text: 'A lightweight and modern alternative utility library for the Bigcommerce Stencil theme framework.  This is a lean, performance-oriented replacement for Bigcommerce\'s standard library that removes third-party dependencies like jQuery.',
         link: {
           href: 'https://github.com/dwest-teo/slim-stencil-tools',
-          title: 'slim-stencil-tools on Github',
           img: '/static/images/sst-ss.jpg',
           imgLg: '/static/images/sst-ss-lg.jpg',
         },
@@ -109,11 +104,10 @@ const simDb = {
         notable: 'Less than 1/3 the size of the original library it replaces',
       },
       {
-        title: 'ike.js',
-        p: 'A small, dependency-free JavaScript library that asynchronously loads SVG sprites and saves them to the client\'s local storage.',
+        heading: 'ike.js',
+        text: 'A small, dependency-free JavaScript library that asynchronously loads SVG sprites and saves them to the client\'s local storage.',
         link: {
           href: 'https://github.com/dwest-teo/ike.js',
-          title: 'ike.js on Github',
           img: '/static/images/ike-ss.jpg',
           imgLg: '/static/images/ike-ss-lg.jpg',
         },
@@ -121,7 +115,6 @@ const simDb = {
         notable: 'A simple utility that does one thing well',
       },
     ],
-    moreToCome: true,
   },
 };
 
