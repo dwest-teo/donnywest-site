@@ -23,6 +23,10 @@
   "engines": {
     "node": "7.6.0"
   },
+  "alias": [
+    "donnywest.com",
+    "www.donnywest.com"
+  ],
   "xo": {
     "envs": [
       "node",
