@@ -81,10 +81,6 @@ const Footer = () => (
           padding-top: 2rem;
           padding-bottom: 2rem;
         }
-
-        a {
-          font-size: 2.25rem;
-        }
       }
     `}</style>
   </footer>

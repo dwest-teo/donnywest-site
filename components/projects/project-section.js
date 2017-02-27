@@ -8,8 +8,7 @@ const ProjectSection = ({ project }) => {
   return (
     <article className={heading === 'ike.js' ? 'last' : null}>
       <ProjectTopper heading={heading} text={text} link={link} />
-      <ProjectTldr title={technologies.title} list={technologies.list} />
-      <ProjectTldr title={notable.title} list={notable.list} />
+      <ProjectTldr technologies={technologies} notable={notable} />
 
       <style jsx>{`
         article {
@@ -43,14 +42,8 @@ ProjectSection.propTypes = {
     link: PropTypes.shape({
       href: PropTypes.string,
     }),
-    technologies: PropTypes.shape({
-      title: PropTypes.string,
-      list: PropTypes.arrayOf(PropTypes.string),
-    }),
-    notable: PropTypes.shape({
-      title: PropTypes.string,
-      list: PropTypes.arrayOf(PropTypes.string),
-    }),
+    technologies: PropTypes.string,
+    notable: PropTypes.string,
   }),
 };
 

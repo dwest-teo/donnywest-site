@@ -6,9 +6,10 @@ const SectionHeading = props => (
     <style jsx>{`
       h3 {
         font-size: 1.25rem;
-        font-weight: 400;
+        font-weight: 700;
+        color: #777;
         max-width: 20em;
-        line-height: 1.5;
+        line-height: 1.25;
       }
 
       @media (min-width: 30em) {

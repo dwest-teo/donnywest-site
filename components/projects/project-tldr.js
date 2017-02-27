@@ -1,33 +1,37 @@
 import React, { PropTypes } from 'react';
 
-const ProjectTldr = ({ title, list }) => (
-  <ul>
-    <li><strong>{title}</strong></li>
-    {list.map((item, i) => (
-      <li key={i}>{item}</li>
-    ))}
+const ProjectTldr = ({ technologies, notable }) => (
+  <dl>
+    <dt>Technologies:</dt>
+    <dd>{technologies}</dd>
+    <dt>Notable:</dt>
+    <dd>{notable}</dd>
 
     <style jsx>{`
-      ul {
+      dl {
         font-size: .875rem;
-        color: #777;
+        line-height: 1.25;
+        padding-top: 1rem;
+        margin: 0;
       }
 
-      li {
-        display: inline-block;
-      }
-
-      strong {
+      dt {
         text-transform: uppercase;
         font-weight: 700;
+        color: #777;
+        margin-top: 1rem;
+      }
+
+      dd {
+        margin-left: 0;
       }
     `}</style>
-  </ul>
+  </dl>
 );
 
 ProjectTldr.propTypes = {
-  title: PropTypes.string,
-  list: PropTypes.arrayOf(PropTypes.string),
+  technologies: PropTypes.string,
+  notable: PropTypes.string,
 };
 
 export default ProjectTldr;

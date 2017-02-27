@@ -15,40 +15,43 @@ const data = {
   },
 };
 
-const Home = ({ home }) => (
-  <App component="home">
-    <Head>
-      <title>Donny West | Front End Engineer, JavaScript Developer, Web Pro</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <article>
-      <Heading>{home.heading}</Heading>
-      <Text>{home.text}</Text>
-      <Text>
-        {home.beforeLink}
-        <a href={home.link.href} target="_blank" rel="noopener noreferrer">
-          &nbsp;{home.link.text}&nbsp;
-        </a>
-        {home.afterLink}
-      </Text>
-    </article>
-  </App>
-);
+const Home = ({ data }) => {
+  const { heading, text, beforeLink, afterLink, link } = data;
+
+  return (
+    <App component="home">
+      <Head>
+        <title>Donny West | Front End Engineer, JavaScript Developer, Web Pro</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <article>
+        <Heading>{heading}</Heading>
+        <Text>{text}</Text>
+        <Text>
+          {beforeLink}
+          <a href={link.href} target="_blank" rel="noopener noreferrer">
+            &nbsp;{link.text}&nbsp;
+          </a>
+          {afterLink}
+        </Text>
+      </article>
+    </App>
+  );
+};
 
 Home.propTypes = {
-  home: PropTypes.shape({
+  data: PropTypes.shape({
     heading: PropTypes.string,
     p1: PropTypes.string,
     beforeLink: PropTypes.string,
     afterLink: PropTypes.string,
     link: PropTypes.shape({
       href: PropTypes.string,
-      title: PropTypes.string,
       text: PropTypes.string,
     }),
   }),
 };
 
-Home.defaultProps = { home: data };
+Home.defaultProps = { data };
 
 export default Home;

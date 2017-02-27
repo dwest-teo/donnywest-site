@@ -67,28 +67,8 @@ const simDb = {
           img: '/static/images/teo-ss.jpg',
           imgLg: '/static/images/teo-ss-lg.jpg',
         },
-        technologies: {
-          title: 'Technologies',
-          list: [
-            'React',
-            'Redux',
-            'Redux-Saga',
-            'Node.js',
-            'Ruby',
-            'Go',
-            'SASS',
-            'Webpack',
-            'Google Container Engine',
-            'Google App Engine',
-          ],
-        },
-        notable: {
-          title: 'Notable',
-          list: [
-            'First Bigcommerce store using a React SPA',
-            'Custom integrations with Algolia, Yotpo, Netsuite, imgix, ZMags, and more',
-          ],
-        },
+        technologies: 'React, Redux, Redux-Saga, Node.js, Ruby, Go, SASS, Webpack, Google Container Engine, Google App Engine',
+        notable: 'First Bigcommerce store using a React SPA, custom integrations with Algolia, Yotpo, Netsuite, imgix, ZMags, and more',
       },
       {
         heading: 'Donny West',
@@ -98,22 +78,8 @@ const simDb = {
           img: '/static/images/dw-ss.jpg',
           imgLg: '/static/images/dw-ss-lg.jpg',
         },
-        technologies: {
-          title: 'Technologies',
-          list: [
-            'React',
-            'Redux',
-            'Redux-Saga',
-            'Node.js',
-            'Webpack',
-          ],
-        },
-        notable: {
-          title: 'Notable',
-          list: [
-            'The only officially authorized Donny West website in the world',
-          ],
-        },
+        technologies: 'React, Node.js, Webpack, Next.js, styled-jsx',
+        notable: 'The only officially authorized Donny West website in the world',
       },
       {
         heading: 'Brink Commerce',
@@ -123,22 +89,8 @@ const simDb = {
           img: '/static/images/brink-ss.jpg',
           imgLg: '/static/images/brink-ss-lg.jpg',
         },
-        technologies: {
-          title: 'Technologies',
-          list: [
-            'JavaScript(ES6)',
-            'SASS',
-            'Gulp',
-            'Rollup',
-            'Python',
-          ],
-        },
-        notable: {
-          title: 'Notable',
-          list: [
-            'It\'s really, really fast',
-          ],
-        },
+        technologies: 'JavaScript(ES6), SASS, Gulp, Rollup, Python',
+        notable: 'It\'s really, really fast',
       },
       {
         heading: 'slim-stencil-tools',
@@ -148,20 +100,8 @@ const simDb = {
           img: '/static/images/sst-ss.jpg',
           imgLg: '/static/images/sst-ss-lg.jpg',
         },
-        technologies: {
-          title: 'Technologies',
-          list: [
-            'JavaScript(ES6)',
-            'Gulp',
-            'Webpack',
-          ],
-        },
-        notable: {
-          title: 'Notable',
-          list: [
-            'Less than 1/3 the size of the original library it replaces',
-          ],
-        },
+        technologies: 'JavaScript(ES6), Gulp, Webpack',
+        notable: 'Less than 1/3 the size of the original library it replaces',
       },
       {
         heading: 'ike.js',
@@ -171,20 +111,8 @@ const simDb = {
           img: '/static/images/ike-ss.jpg',
           imgLg: '/static/images/ike-ss-lg.jpg',
         },
-        technologies: {
-          title: 'Technologies',
-          list: [
-            'JavaScript(ES6)',
-            'Gulp',
-            'Webpack',
-          ],
-        },
-        notable: {
-          title: 'Notable',
-          list: [
-            'A simple utility that does one thing well',
-          ],
-        },
+        technologies: 'JavaScript(ES6), Gulp',
+        notable: 'A simple utility that does one thing well',
       },
     ],
   },
