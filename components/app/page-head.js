@@ -8,6 +8,7 @@ const PageHead = ({ pageTitle }) => {
     <Head>
       <title>{pageTitle ? `${pageTitle} - ${defTitle}` : defTitle}</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link rel="shortcut icon" href="/static/favicon.ico" />
     </Head>
   );
 };
