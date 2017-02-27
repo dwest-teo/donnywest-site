@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import Head from 'next/head';
 import App from '../components/app';
+import PageHead from '../components/app/page-head';
 import simDb from '../components/sim-db';
 import Heading from '../components/heading';
 import Text from '../components/text';
@@ -12,14 +12,11 @@ class Home extends Component {
   }
 
   render() {
-    const { heading, text, beforeLink, afterLink, link, isLoading } = this.props;
+    const { component, heading, text, beforeLink, afterLink, link, isLoading } = this.props;
 
     return (
-      <App component="home">
-        <Head>
-          <title>Donny West | Front End Engineer, JavaScript Developer, Web Pro</title>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        </Head>
+      <App component={component}>
+        <PageHead />
         <main>
           <Heading>{heading}</Heading>
           {isLoading ? (
@@ -43,6 +40,7 @@ class Home extends Component {
 }
 
 Home.propTypes = {
+  component: PropTypes.string,
   heading: PropTypes.string,
   text: PropTypes.string,
   beforeLink: PropTypes.string,

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import Head from 'next/head';
 import App from '../components/app';
+import PageHead from '../components/app/page-head';
 import simDb from '../components/sim-db';
 import Heading from '../components/heading';
 import ProjectSection from '../components/projects/project-section';
@@ -16,10 +16,7 @@ class Projects extends Component {
 
     return (
       <App component={component}>
-        <Head>
-          <title>Projects - Donny West | Front End Engineer, JavaScript Developer, Web Pro</title>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        </Head>
+        <PageHead pageTitle={heading} />
         <main>
           <Heading page>{heading}</Heading>
           {isLoading ? (
