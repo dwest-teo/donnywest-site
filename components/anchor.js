@@ -16,7 +16,7 @@ const Anchor = props => (
         }
 
         .active {
-          color: #00449E;
+          color: #357EDD;
         }
 
         @media (min-width: 30em) {

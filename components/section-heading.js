@@ -7,9 +7,10 @@ const SectionHeading = props => (
       h3 {
         font-size: 1.25rem;
         font-weight: 700;
-        color: #777;
+        color: #555;
         max-width: 20em;
-        line-height: 1.25;
+        line-height: 1.5;
+        margin: 1.5rem 0;
       }
 
       @media (min-width: 30em) {

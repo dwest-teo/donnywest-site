@@ -12,10 +12,10 @@ class About extends Component {
   }
 
   render() {
-    const { heading, sections, isLoading } = this.props;
+    const { component, heading, sections, isLoading } = this.props;
 
     return (
-      <App component="about">
+      <App component={component}>
         <Head>
           <title>About - Donny West | Front End Engineer, JavaScript Developer, Web Pro</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -38,6 +38,7 @@ class About extends Component {
 }
 
 About.propTypes = {
+  component: PropTypes.string,
   heading: PropTypes.string,
   sections: PropTypes.arrayOf(PropTypes.shape({
     heading: PropTypes.string,

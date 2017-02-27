@@ -6,10 +6,11 @@ const SkillList = ({ list }) => (
     {list.items.map((item, i) => (
       <li key={i} className="item"><small>{item}</small></li>
     ))}
+
     <style jsx>{`
       ul {
         max-width: 34em;
-        margin: 2rem 0;
+        margin: 2rem 0 3rem;
         padding: 0;
         list-style-type: none;
         color: #555;

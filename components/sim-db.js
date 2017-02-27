@@ -1,6 +1,17 @@
 const simDb = {
+  home: {
+    component: 'home',
+    heading: 'I\'m Donny West.',
+    text: 'I\'m a full-stack developer focused on building modern, performant, modular applications for the web and mobile.  I create solutions that solve problems for organizations and improve experiences for users.  Every day I try to leave the web a little faster, friendlier, and better than the way I found it.',
+    beforeLink: 'Currently, I\'m the lead front-end engineer at',
+    afterLink: 'based in Gainesville, FL.',
+    link: {
+      href: 'https://www.theelegantoffice.com',
+      text: 'The Elegant Office,',
+    },
+  },
   about: {
-    component: 'ABOUT',
+    component: 'about',
     heading: 'About Me',
     sections: [
       {
@@ -34,7 +45,7 @@ const simDb = {
         },
       },
       {
-        heading: 'Before becoming a developer, I spent 6 years in management roles for e-commerce merchants and providers.',
+        heading: 'Before becoming a developer, I worked in management roles for e-commerce merchants and providers.',
         text: 'My management experience has given me some unique perspectives as a developer.  I believe that great applications are born out of a clear vision and focus, long before the first line of code is written.  Solutions need to be impeccably tailored to fit the problem, and they always start with a deep, big-picture understanding of the project at-hand.',
         list: {
           title: 'Platforms',
@@ -56,7 +67,7 @@ const simDb = {
     ],
   },
   projects: {
-    component: 'PROJECTS',
+    component: 'projects',
     heading: 'Projects',
     projects: [
       {
