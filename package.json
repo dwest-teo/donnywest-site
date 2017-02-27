@@ -20,6 +20,9 @@
     "eslint-plugin-react": "^6.10.0",
     "xo": "^0.17.1"
   },
+  "engines": {
+    "node": "7.6.0"
+  },
   "xo": {
     "envs": [
       "node",
