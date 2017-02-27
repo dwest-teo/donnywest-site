@@ -43,7 +43,7 @@ const Footer = () => (
         <path d="M12.658 14.577v-4.27h1.423V16H1.23v-5.693H2.65v4.27h10.006zm-8.583-1.423h7.16V11.73h-7.16v1.424zm.173-3.235l6.987 1.465.3-1.38L4.55 8.54l-.302 1.38zm.906-3.365l6.47 3.02.602-1.295-6.47-3.02-.602 1.295zm1.81-3.19l5.478 4.57.906-1.078-5.477-4.57-.905 1.077zM10.502 0L9.338.863l4.27 5.735 1.164-.862L10.5 0z" />
       </svg>
     </a>
-    <p>© 2017 Donny West</p>
+    <p>&copy; {new Date().getFullYear()} Donny West</p>
 
     <style jsx>{`
       footer {
@@ -51,52 +51,29 @@ const Footer = () => (
         color: rgba(0,0,0,.7);
         border-color: rgba(0,0,0,.1);
       }
-      h4 {
-        font-weight: bold;
-        font-size: 1.25rem;
-        max-width: 20em;
-        margin-top: 0;
-        margin-bottom: .5rem;
-      }
+
       a {
         color: #777;
         line-height: 1;
         display: inline-block;
         margin-right: 1rem;
         font-size: 1.5rem;
-        font-weight: bold;
-        text-decoration: none;
-        opacity: 1;
-        transition: color .15s ease-in opacity .15s ease-in;
+        font-weight: 700;
       }
-      a:link,
-      a:visited,
-      a:hover,
-      a:active,
-      a:focus {
-        transition: color .15s ease-in opacity .15s ease-in;
-      }
-      a:focus {
-        outline: 1px dotted currentColor;
-      }
-      a:hover,
-      a:focus {
-        opacity: .5;
-      }
-      a:active {
-        opacity: .8;
-      }
+
       .email-link {
         display: block;
         margin-bottom: 1rem;
       }
+
       p {
         font-size: .875rem;
         text-transform: uppercase;
         margin-bottom: 0;
         line-height: 1;
-        font-weight: bold;
+        font-weight: 700;
       }
+
       @media (min-width: 30em) {
         footer {
           padding-left: 4rem;
@@ -104,9 +81,7 @@ const Footer = () => (
           padding-top: 2rem;
           padding-bottom: 2rem;
         }
-        h4 {
-          font-size: 1.5rem;
-        }
+
         a {
           font-size: 2.25rem;
         }

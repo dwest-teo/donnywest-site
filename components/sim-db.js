@@ -5,7 +5,7 @@ const simDb = {
     sections: [
       {
         heading: 'I develop web applications with a strong focus on performance & usability.',
-        text: 'Working with modern languages and technology stacks, I build real-world applications that deliver meaningful, functional experiences to users on any device or browser.  I have significant experience in e-commerce, from customer-facing front-ends to integration systems with vendors and providers.  I enjoy building modular, scalable solutions that exceed expectations and shatter goals.',
+        text: 'Working with modern languages and technology stacks, I build real-world applications that deliver meaningful, functional experiences to users on any device or browser.  I have significant experience in e-commerce, from customer-facing front-ends to integration systems with vendors and providers.  I enjoy building modular, scalable, big-picture solutions that add real value for users.',
         list: {
           title: 'Skills',
           items: [
@@ -20,15 +20,15 @@ const simDb = {
       },
       {
         heading: 'I\'m opinionated about doing things properly, but flexible about the tools I use.',
-        text: 'I believe the first step to completing a project properly is to choose the right tools for the job.  I have a set of languages and frameworks that I love to use, but I\'m a firm believer in being flexible enough to try new and emergent technologies when they are a better fit for the task at hand.',
+        text: 'I believe the first step to completing a project properly is to choose the right tools for the job.  I have a set of languages and frameworks that I love to use, but I believe in being flexible enough to try new and emergent technologies when they are a better fit for the task at hand.',
         list: {
           title: 'Tools',
           items: [
             'React',
-            'Webpack + Babel',
-            'Redux/Flux',
-            'Gulp',
-            'CSS Modules',
+            'Webpack, Babel, Gulp',
+            'Redux / Flux',
+            'NOSQL',
+            'Express',
             'Hapi.js',
           ],
         },
@@ -40,17 +40,17 @@ const simDb = {
           title: 'Platforms',
           items: [
             'Bigcommerce',
-            'Google Cloud',
+            'Google Cloud Platform',
             'Algolia',
             'AWS',
             'imgix',
-            'Heroku',
+            'Netsuite',
           ],
         },
       },
       {
         heading: 'I\'m also a father of two that used to have all kinds of cool interests and hobbies.',
-        text: 'Now most of my time is spent singing the ABC song, reading books about animals, or playing with Thomas, Gordon, and Henry in an elaborate recreation of the island of Sodor.  Also diapers.  This might not sound especially exciting, but I wouldn\'t have it any other way!',
+        text: 'Now most of my time is spent singing the ABCs, reading books about animals, or playing with Thomas, Gordon, and Henry in an elaborate recreation of the island of Sodor.  Also diapers.  This might not sound very exciting, but I wouldn\'t have it any other way!',
         list: null,
       },
     ],
@@ -61,25 +61,59 @@ const simDb = {
     projects: [
       {
         heading: 'The Elegant Office',
-        text: 'My day job - a complete custom e-commerce application and ecosystem.  The Elegant Office uses a custom React/Redux front-end application, with a smart API surface that decouples the backend, making it platform-agnostic.  The site currently runs on the Bigcommerce platform, and features a number of notable "firsts" and unique integrations.',
+        text: 'My day job - a complete custom e-commerce application and ecosystem.  The Elegant Office uses a React/Redux front-end application with a smart API surface that decouples the backend, making it platform-agnostic.  The front-end currently runs on the Bigcommerce platform, and features a number of notable "firsts" and unique integrations.  The customer-facing app is backed by a number of supporting microservices written in Ruby, Go, and Node.js.',
         link: {
           href: 'https://www.theelegantoffice.com/',
           img: '/static/images/teo-ss.jpg',
           imgLg: '/static/images/teo-ss-lg.jpg',
         },
-        technologies: 'React, Redux, Redux-Saga, Node.js, Webpack, Google Cloud, Ruby, Go, SASS',
-        notable: 'First Bigcommerce store using a React SPA, custom integrations with Algolia, Yotpo, Netsuite, imgix, ZMags, and more',
+        technologies: {
+          title: 'Technologies',
+          list: [
+            'React',
+            'Redux',
+            'Redux-Saga',
+            'Node.js',
+            'Ruby',
+            'Go',
+            'SASS',
+            'Webpack',
+            'Google Container Engine',
+            'Google App Engine',
+          ],
+        },
+        notable: {
+          title: 'Notable',
+          list: [
+            'First Bigcommerce store using a React SPA',
+            'Custom integrations with Algolia, Yotpo, Netsuite, imgix, ZMags, and more',
+          ],
+        },
       },
       {
         heading: 'Donny West',
-        text: 'The site you\'re browsing at this very moment.  It\'s a simple enough site, but there\'s a modern tech stack behind it working to make it fast, responsive, and readable.  A custom Go server and React + Redux front-end application make this site vastly more complex than it needs to be, but it\'s all in good fun.',
+        text: 'The site you\'re browsing at this very moment.  It\'s a simple enough site, but there\'s a modern tech stack behind it working to make it fast, responsive, and readable.  A custom universal React application (rendering on both the server and client) and supporting Node.js API microservices make this site vastly more complex than it needs to be, but hey, it\'s all in good fun.',
         link: {
           href: '/',
           img: '/static/images/dw-ss.jpg',
           imgLg: '/static/images/dw-ss-lg.jpg',
         },
-        technologies: 'React, Redux, Node.js, JavaScript(ES6), Webpack, Go, PostCSS, CSS Modules',
-        notable: 'The only officially authorized Donny West website in the world',
+        technologies: {
+          title: 'Technologies',
+          list: [
+            'React',
+            'Redux',
+            'Redux-Saga',
+            'Node.js',
+            'Webpack',
+          ],
+        },
+        notable: {
+          title: 'Notable',
+          list: [
+            'The only officially authorized Donny West website in the world',
+          ],
+        },
       },
       {
         heading: 'Brink Commerce',
@@ -89,8 +123,22 @@ const simDb = {
           img: '/static/images/brink-ss.jpg',
           imgLg: '/static/images/brink-ss-lg.jpg',
         },
-        technologies: 'JavaScript(ES6), SASS, Gulp, Rollup, Python',
-        notable: 'It\'s really, really fast',
+        technologies: {
+          title: 'Technologies',
+          list: [
+            'JavaScript(ES6)',
+            'SASS',
+            'Gulp',
+            'Rollup',
+            'Python',
+          ],
+        },
+        notable: {
+          title: 'Notable',
+          list: [
+            'It\'s really, really fast',
+          ],
+        },
       },
       {
         heading: 'slim-stencil-tools',
@@ -100,8 +148,20 @@ const simDb = {
           img: '/static/images/sst-ss.jpg',
           imgLg: '/static/images/sst-ss-lg.jpg',
         },
-        technologies: 'JavaScript(ES6), Gulp, Webpack',
-        notable: 'Less than 1/3 the size of the original library it replaces',
+        technologies: {
+          title: 'Technologies',
+          list: [
+            'JavaScript(ES6)',
+            'Gulp',
+            'Webpack',
+          ],
+        },
+        notable: {
+          title: 'Notable',
+          list: [
+            'Less than 1/3 the size of the original library it replaces',
+          ],
+        },
       },
       {
         heading: 'ike.js',
@@ -111,8 +171,20 @@ const simDb = {
           img: '/static/images/ike-ss.jpg',
           imgLg: '/static/images/ike-ss-lg.jpg',
         },
-        technologies: 'JavaScript(ES6), Gulp',
-        notable: 'A simple utility that does one thing well',
+        technologies: {
+          title: 'Technologies',
+          list: [
+            'JavaScript(ES6)',
+            'Gulp',
+            'Webpack',
+          ],
+        },
+        notable: {
+          title: 'Notable',
+          list: [
+            'A simple utility that does one thing well',
+          ],
+        },
       },
     ],
   },

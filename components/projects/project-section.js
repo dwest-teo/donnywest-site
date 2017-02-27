@@ -1,21 +1,16 @@
 import React, { PropTypes } from 'react';
-import Text from '../text';
 import ProjectTopper from './project-topper';
+import ProjectTldr from './project-tldr';
 
 const ProjectSection = ({ project }) => {
   const { heading, text, link, technologies, notable } = project;
 
   return (
-    <article>
+    <article className={heading === 'ike.js' ? 'last' : null}>
       <ProjectTopper heading={heading} text={text} link={link} />
-      <p className="tldr">
-        <strong>Technologies: </strong>
-        {technologies}
-      </p>
-      <p className="tldr last">
-        <strong>Notable: </strong>
-        {notable}
-      </p>
+      <ProjectTldr title={technologies.title} list={technologies.list} />
+      <ProjectTldr title={notable.title} list={notable.list} />
+
       <style jsx>{`
         article {
           padding: 2rem 1rem;
@@ -26,18 +21,9 @@ const ProjectSection = ({ project }) => {
           border-bottom-width: 1px;
         }
 
-        .tldr {
-          font-size: .875rem;
-          color: #777;
-        }
-
         .last {
-          margin-bottom: 0;
-        }
-
-        strong {
-          text-transform: uppercase;
-          font-weight: 700;
+          border-bottom: 0;
+          padding-bottom: 0;
         }
 
         @media (min-width: 60em) {
@@ -57,8 +43,14 @@ ProjectSection.propTypes = {
     link: PropTypes.shape({
       href: PropTypes.string,
     }),
-    technologies: PropTypes.string,
-    notable: PropTypes.string,
+    technologies: PropTypes.shape({
+      title: PropTypes.string,
+      list: PropTypes.arrayOf(PropTypes.string),
+    }),
+    notable: PropTypes.shape({
+      title: PropTypes.string,
+      list: PropTypes.arrayOf(PropTypes.string),
+    }),
   }),
 };
 
