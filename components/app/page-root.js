@@ -3,6 +3,7 @@ import React, { PropTypes } from 'react';
 const PageRoot = ({ children }) => (
   <div className="root">
     {children}
+
     <style jsx>{`
       .root {
         min-height: 100vh;

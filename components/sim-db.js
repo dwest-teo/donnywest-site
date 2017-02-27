@@ -4,8 +4,8 @@ const simDb = {
     heading: 'About Me',
     sections: [
       {
-        heading: 'I develop real-world web applications with a strong focus on performance & usability on any device.',
-        text: 'Working with modern languages and technology stacks, I build applications that solve real-world problems for organizations and users.  I have significant experience in e-commerce, from customer-facing front-ends to integration systems with vendors and providers.  I enjoy building modular, scalable solutions that exceed expectations and shatter goals.',
+        heading: 'I develop web applications with a strong focus on performance & usability.',
+        text: 'Working with modern languages and technology stacks, I build real-world applications that deliver meaningful, functional experiences to users on any device or browser.  I have significant experience in e-commerce, from customer-facing front-ends to integration systems with vendors and providers.  I enjoy building modular, scalable solutions that exceed expectations and shatter goals.',
         list: {
           title: 'Skills',
           items: [

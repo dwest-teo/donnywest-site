@@ -44,6 +44,7 @@ const Footer = () => (
       </svg>
     </a>
     <p>© 2017 Donny West</p>
+
     <style jsx>{`
       footer {
         padding: 1rem;

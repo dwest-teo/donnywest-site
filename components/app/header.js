@@ -6,13 +6,32 @@ const Header = props => {
 
   return (
     <nav>
-      <Anchor prefetch href="/">
+      <Anchor
+        prefetch
+        href="/"
+        active={component === 'home'}
+      >
         <span className="f-name">Donny</span><span className="l-name">West</span>
       </Anchor>
       <div className="links">
-        <Anchor prefetch href="/about/" nav>About</Anchor>
-        <Anchor prefetch href="/projects/" nav>Projects</Anchor>
+        <Anchor
+          prefetch
+          href="/about/"
+          nav
+          active={component === 'about'}
+        >
+          About
+        </Anchor>
+        <Anchor
+          prefetch
+          href="/projects/"
+          nav
+          active={component === 'projects'}
+        >
+          Projects
+        </Anchor>
       </div>
+
       <style jsx>{`
         nav {
           display: flex;

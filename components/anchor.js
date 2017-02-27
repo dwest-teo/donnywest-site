@@ -4,12 +4,19 @@ import Link from 'next/link';
 const Anchor = props => (
   <Link {...props}>
     <a className={'nav' in props && 'nav'}>
-      {props.children}
+      <span className={props.active && 'active'}>
+        {props.children}
+      </span>
+
       <style jsx>{`
         .nav {
           color: #333;
           margin-left: 1rem;
           font-size: .875rem;
+        }
+
+        .active {
+          color: #00449E;
         }
 
         @media (min-width: 30em) {
@@ -25,7 +32,7 @@ const Anchor = props => (
 
 Anchor.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
+  active: PropTypes.bool,
 };
 
 export default Anchor;

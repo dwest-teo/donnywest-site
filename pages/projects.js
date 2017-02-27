@@ -1,16 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import Head from 'next/head';
-import App from '../components/app/app';
+import App from '../components/app';
 import simDb from '../components/sim-db';
 import Heading from '../components/heading';
 import ProjectSection from '../components/projects/project-section';
 
 class Projects extends Component {
   static async getInitialProps() {
-    const data = await new Promise(resolve => {
-      setTimeout(resolve(simDb.projects), 100);
-    });
-
+    const data = await simDb.projects;
     return { ...data, isLoading: false };
   }
 

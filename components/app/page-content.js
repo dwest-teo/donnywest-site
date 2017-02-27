@@ -3,6 +3,7 @@ import React, { PropTypes } from 'react';
 const PageContent = ({ children }) => (
   <div className="content">
     {children}
+
     <style jsx>{`
       .content {
         background-color: hsla(0,0%,100%,.9);
