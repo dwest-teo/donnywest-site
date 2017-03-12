@@ -16,7 +16,7 @@ const Header = props => {
       <div className="links">
         <Anchor
           prefetch
-          href="/about/"
+          href="/about"
           nav
           active={component === 'about'}
         >
@@ -24,7 +24,7 @@ const Header = props => {
         </Anchor>
         <Anchor
           prefetch
-          href="/projects/"
+          href="/projects"
           nav
           active={component === 'projects'}
         >
