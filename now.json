@@ -1,0 +1,9 @@
+{
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "alias": [
+    "donnywest.com",
+    "www.donnywest.com"
+  ]
+}
