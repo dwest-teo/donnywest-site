@@ -9,6 +9,8 @@ const PageHead = ({ pageTitle }) => {
     <Head>
       <title>{pageTitle ? `${pageTitle} - ${defTitle}` : defTitle}</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta name="theme-color" content="#357EDD" />
+      <link rel="manifest" href="/static/manifest.json" />
       <link rel="shortcut icon" href="/static/favicon.ico" />
     </Head>
   );

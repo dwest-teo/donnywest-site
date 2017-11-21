@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
+import { Link } from '../routes';
 
 const Anchor = props => (
   <Link
-    href={props.href}
+    route={props.route}
+    params={props.params}
     prefetch={props.prefetch}
   >
     <a className={'nav' in props && 'nav'}>
@@ -36,7 +37,8 @@ const Anchor = props => (
 
 Anchor.propTypes = {
   children: PropTypes.node.isRequired,
-  href: PropTypes.string.isRequired,
+  route: PropTypes.string.isRequired,
+  params: PropTypes.object,
   prefetch: PropTypes.bool,
   active: PropTypes.bool,
 };
@@ -44,6 +46,7 @@ Anchor.propTypes = {
 Anchor.defaultProps = {
   active: false,
   prefetch: false,
+  params: {},
 };
 
 export default Anchor;
