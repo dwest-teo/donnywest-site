@@ -2,12 +2,12 @@ const simDb = {
   home: {
     component: 'home',
     heading: 'I\'m Donny West.',
-    text: 'I\'m a full-stack developer focused on building modern, performant, modular applications for the web and mobile.  I create solutions that solve problems for organizations and improve experiences for users.  Every day I try to leave the web a little faster, friendlier, and better than the way I found it.',
-    beforeLink: 'Currently, I\'m the lead front-end engineer at',
-    afterLink: 'based in Gainesville, FL.',
+    text: 'I\'m a full-stack developer focused on building modern & performant applications for the web and mobile.  I create solutions that solve problems for organizations and improve experiences for users.  Every day I try to leave the web a little faster, friendlier, and better than the way I found it.',
+    beforeLink: 'Currently, I\'m a senior software engineer at',
+    afterLink: 'based in Fort Lauderdale, FL.',
     link: {
-      href: 'https://www.theelegantoffice.com',
-      text: 'The Elegant Office,',
+      href: 'https://www.magicleap.com/',
+      text: 'Magic Leap,',
     },
   },
   about: {
@@ -38,7 +38,7 @@ const simDb = {
           title: 'Tools',
           items: [
             'React',
-            'Webpack, Babel, Gulp',
+            'Webpack, Babel',
             'Redux / Flux',
             'NOSQL',
             'Express',
@@ -76,7 +76,7 @@ const simDb = {
     projects: [
       {
         heading: 'The Elegant Office',
-        text: 'My day job - a complete custom e-commerce application and ecosystem.  The Elegant Office uses a React/Redux front-end application with a smart API surface that decouples the backend, making it platform-agnostic.  The front-end currently runs on the Bigcommerce platform, and features a number of notable "firsts" and unique integrations.  The customer-facing app is backed by a number of supporting microservices written in Ruby, Go, and Node.js.',
+        text: 'A complete custom e-commerce application and ecosystem.  The Elegant Office uses a React/Redux front-end application with a smart API surface that decouples the backend, making it platform-agnostic.  The front-end currently runs on the Bigcommerce platform, and features a number of notable "firsts" and unique integrations.  The customer-facing app is backed by a number of supporting microservices written in Ruby, Go, and Node.js.',
         link: {
           href: 'https://www.theelegantoffice.com/',
           img: '/static/images/teo-ss.jpg',
