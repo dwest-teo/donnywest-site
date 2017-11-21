@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import App from '../components/app';
 import PageHead from '../components/app/page-head';
 import simDb from '../components/sim-db';

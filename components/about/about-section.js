@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import SectionHeading from '../section-heading';
 import Text from '../text';
 import SkillList from './skill-list';

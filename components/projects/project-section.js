@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import ProjectTopper from './project-topper';
 import ProjectTldr from './project-tldr';
 

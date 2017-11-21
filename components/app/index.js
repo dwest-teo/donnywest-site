@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { initAnalytics, trackPageView } from '../../utils/analytics';
 import Header from './header';
 import Footer from './footer';

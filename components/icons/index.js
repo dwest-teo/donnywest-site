@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import svgPaths from './svg-paths';
 
 const Icon = ({ name, size = 32, fill = 'currentcolor', ...props }) => (
