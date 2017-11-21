@@ -1,7 +1,7 @@
 {
-  "name": "next-donnywest",
+  "name": "donnywest",
   "version": "1.0.0",
-  "description": "test with next.js",
+  "description": "Personal site of Donny West",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
@@ -11,18 +11,19 @@
   "author": "Donny West",
   "license": "MIT",
   "dependencies": {
-    "next": "^2.0.0-beta.36",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-ga": "^2.1.2"
+    "next": "^4.1.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-ga": "^2.3.5"
   },
   "devDependencies": {
-    "eslint-config-xo-react": "^0.10.0",
-    "eslint-plugin-react": "^6.10.0",
-    "xo": "^0.17.1"
+    "eslint-config-xo-react": "^0.14.0",
+    "eslint-plugin-react": "^7.5.1",
+    "xo": "^0.18.2"
   },
   "engines": {
-    "node": "7.6.0"
+    "node": "9.2.0"
   },
   "xo": {
     "envs": [
@@ -45,9 +46,13 @@
         2,
         "tag-aligned"
       ],
-      "react/jsx-space-before-closing": [
+      "react/jsx-tag-spacing": [
         2,
-        "always"
+        {
+          "closingSlash": "never",
+          "beforeSelfClosing": "always",
+          "afterOpening": "never"
+        }
       ],
       "react/forbid-component-props": 0
     }
