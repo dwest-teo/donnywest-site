@@ -18,12 +18,12 @@
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-ga": "^2.3.5"
+    "react-ga": "^2.3.5",
+    "sw-precache-webpack-plugin": "^0.11.4"
   },
   "devDependencies": {
     "eslint-config-xo-react": "^0.14.0",
     "eslint-plugin-react": "^7.5.1",
-    "sw-precache-webpack-plugin": "^0.11.4",
     "xo": "^0.18.2"
   },
   "engines": {
