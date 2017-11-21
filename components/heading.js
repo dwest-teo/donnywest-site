@@ -35,7 +35,7 @@ const Heading = props => (
 );
 
 Heading.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 };
 
 export default Heading;

@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const SkillList = ({ list }) => (
   <ul>
     <li className="title"><strong>{list.title}</strong></li>
-    {list.items.map((item, i) => (
-      <li key={i} className="item"><small>{item}</small></li>
+    {list.items.map(item => (
+      <li key={item.replace(/\s/g, '')} className="item"><small>{item}</small></li>
     ))}
 
     <style jsx>{`
@@ -56,7 +56,7 @@ SkillList.propTypes = {
   list: PropTypes.shape({
     title: PropTypes.string,
     items: PropTypes.arrayOf(PropTypes.string),
-  }),
+  }).isRequired,
 };
 
 export default SkillList;

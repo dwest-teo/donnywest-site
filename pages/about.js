@@ -24,8 +24,8 @@ class About extends Component {
             <span>Loading...</span>
           ) : (
             <div>
-              {sections.map((section, i) => (
-                <AboutSection key={i} section={section} />
+              {sections.map(section => (
+                <AboutSection key={section.key} section={section} />
               ))}
             </div>
           )}
@@ -37,14 +37,17 @@ class About extends Component {
 
 About.propTypes = {
   component: PropTypes.string,
-  heading: PropTypes.string,
-  sections: PropTypes.arrayOf(PropTypes.shape({
-    heading: PropTypes.string,
-  })),
+  heading: PropTypes.string.isRequired,
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      heading: PropTypes.string,
+    })
+  ).isRequired,
   isLoading: PropTypes.bool,
 };
 
 About.defaultProps = {
+  component: 'about',
   isLoading: true,
 };
 

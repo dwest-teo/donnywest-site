@@ -19,7 +19,7 @@ const PageRoot = ({ children }) => (
 );
 
 PageRoot.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 };
 
 export default PageRoot;

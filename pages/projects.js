@@ -24,8 +24,8 @@ class Projects extends Component {
             <span>Loading...</span>
           ) : (
             <div>
-              {projects.map((project, i) => (
-                <ProjectSection key={i} project={project} />
+              {projects.map(project => (
+                <ProjectSection key={project.heading.replace(/\s/g, '')} project={project} />
               ))}
             </div>
           )}
@@ -37,14 +37,17 @@ class Projects extends Component {
 
 Projects.propTypes = {
   component: PropTypes.string,
-  heading: PropTypes.string,
-  projects: PropTypes.arrayOf(PropTypes.shape({
-    heading: PropTypes.string,
-  })),
+  heading: PropTypes.string.isRequired,
+  projects: PropTypes.arrayOf(
+    PropTypes.shape({
+      heading: PropTypes.string,
+    })
+  ).isRequired,
   isLoading: PropTypes.bool,
 };
 
 Projects.defaultProps = {
+  component: 'projects',
   isLoading: true,
 };
 

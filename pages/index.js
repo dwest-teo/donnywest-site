@@ -42,18 +42,19 @@ class Home extends Component {
 
 Home.propTypes = {
   component: PropTypes.string,
-  heading: PropTypes.string,
-  text: PropTypes.string,
-  beforeLink: PropTypes.string,
-  afterLink: PropTypes.string,
+  heading: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  beforeLink: PropTypes.string.isRequired,
+  afterLink: PropTypes.string.isRequired,
   link: PropTypes.shape({
     href: PropTypes.string,
     text: PropTypes.string,
-  }),
+  }).isRequired,
   isLoading: PropTypes.bool,
 };
 
 Home.defaultProps = {
+  component: 'home',
   isLoading: true,
 };
 

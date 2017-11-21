@@ -75,8 +75,12 @@ class App extends Component {
 }
 
 App.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   component: PropTypes.string,
+};
+
+App.defaultProps = {
+  component: 'home',
 };
 
 export default App;

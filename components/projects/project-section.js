@@ -45,7 +45,7 @@ ProjectSection.propTypes = {
     }),
     technologies: PropTypes.string,
     notable: PropTypes.string,
-  }),
+  }).isRequired,
 };
 
 export default ProjectSection;

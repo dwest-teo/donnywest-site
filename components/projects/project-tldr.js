@@ -31,8 +31,8 @@ const ProjectTldr = ({ technologies, notable }) => (
 );
 
 ProjectTldr.propTypes = {
-  technologies: PropTypes.string,
-  notable: PropTypes.string,
+  technologies: PropTypes.string.isRequired,
+  notable: PropTypes.string.isRequired,
 };
 
 export default ProjectTldr;

@@ -32,8 +32,12 @@ const Anchor = props => (
 );
 
 Anchor.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   active: PropTypes.bool,
+};
+
+Anchor.defaultProps = {
+  active: false,
 };
 
 export default Anchor;

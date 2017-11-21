@@ -26,7 +26,7 @@ AboutSection.propTypes = {
       title: PropTypes.string,
       items: PropTypes.arrayOf(PropTypes.string),
     }),
-  }),
+  }).isRequired,
 };
 
 export default AboutSection;

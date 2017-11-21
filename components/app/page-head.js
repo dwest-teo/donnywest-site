@@ -18,4 +18,8 @@ PageHead.propTypes = {
   pageTitle: PropTypes.string,
 };
 
+PageHead.defaultProps = {
+  pageTitle: null,
+};
+
 export default PageHead;

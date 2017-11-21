@@ -71,4 +71,8 @@ Header.propTypes = {
   component: PropTypes.string,
 };
 
+Header.defaultProps = {
+  component: 'home',
+};
+
 export default Header;

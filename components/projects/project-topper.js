@@ -70,12 +70,12 @@ const ProjectTopper = ({ heading, text, link }) => (
 );
 
 ProjectTopper.propTypes = {
-  heading: PropTypes.string,
-  text: PropTypes.string,
+  heading: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   link: PropTypes.shape({
     href: PropTypes.string,
     img: PropTypes.string,
-  }),
+  }).isRequired,
 };
 
 export default ProjectTopper;
