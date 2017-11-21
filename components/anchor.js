@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 const Anchor = props => (
-  <Link {...props}>
+  <Link
+    href={props.href}
+    prefetch={props.prefetch}
+  >
     <a className={'nav' in props && 'nav'}>
       <span className={props.active && 'active'}>
         {props.children}
@@ -33,11 +36,14 @@ const Anchor = props => (
 
 Anchor.propTypes = {
   children: PropTypes.node.isRequired,
+  href: PropTypes.string.isRequired,
+  prefetch: PropTypes.bool,
   active: PropTypes.bool,
 };
 
 Anchor.defaultProps = {
   active: false,
+  prefetch: false,
 };
 
 export default Anchor;
