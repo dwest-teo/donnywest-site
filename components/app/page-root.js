@@ -1,21 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { width, color, flexDirection } from 'styled-system';
+
+const RootContainer = styled.div`
+  ${width}
+  ${color}
+  ${flexDirection}
+  min-height: 100vh;
+  display: flex;
+`;
 
 const PageRoot = ({ children }) => (
-  <div className="root">
+  <RootContainer
+    width={1}
+    flexDirection="column"
+    color="black"
+    bg="offWhite"
+  >
     {children}
-
-    <style jsx>{`
-      .root {
-        min-height: 100vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        background-color: #f4f4f4;
-        color: #333;
-      }
-    `}</style>
-  </div>
+  </RootContainer>
 );
 
 PageRoot.propTypes = {
