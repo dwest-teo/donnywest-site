@@ -1,37 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { color, space, fontSize } from 'styled-system';
 import { Link } from '../routes';
 
-const Anchor = props => (
+const AnchorTag = styled.a`
+  ${color}
+  ${space}
+  ${fontSize}
+  cursor: pointer;
+`;
+
+const ActiveContainer = styled.span`
+  ${color}
+`;
+
+const Anchor = ({ route, params, prefetch, nav, active, children }) => (
   <Link
-    route={props.route}
-    params={props.params}
-    prefetch={props.prefetch}
+    route={route}
+    params={params}
+    prefetch={prefetch}
   >
-    <a className={'nav' in props && 'nav'}>
-      <span className={props.active && 'active'}>
-        {props.children}
-      </span>
-
-      <style jsx>{`
-        .nav {
-          color: #333;
-          margin-left: 1rem;
-          font-size: .875rem;
-        }
-
-        .active {
-          color: #357EDD;
-        }
-
-        @media (min-width: 30em) {
-          .nav {
-            margin-left: 2rem;
-            font-size: 1rem;
-          }
-        }
-      `}</style>
-    </a>
+    <AnchorTag
+      color={nav ? 'black' : undefined}
+      ml={nav ? [2, 3] : undefined}
+      fontSize={nav ? [1, 2] : undefined}
+    >
+      <ActiveContainer color={active ? 'blue' : undefined}>
+        {children}
+      </ActiveContainer>
+    </AnchorTag>
   </Link>
 );
 
@@ -41,10 +39,12 @@ Anchor.propTypes = {
   params: PropTypes.object,
   prefetch: PropTypes.bool,
   active: PropTypes.bool,
+  nav: PropTypes.bool,
 };
 
 Anchor.defaultProps = {
   active: false,
+  nav: false,
   prefetch: false,
   params: {},
 };
