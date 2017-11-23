@@ -1,4 +1,5 @@
 const { parse } = require('url');
+const { existsSync } = require('fs');
 const micro = require('micro');
 const send = require('micro').send;
 const match = require('micro-route/match');
@@ -15,20 +16,13 @@ const server = micro(async (req, res) => {
 
   res.setHeader('Vary', 'Accept-Encoding');
 
-  // need to test if file exists here
   if (match(req, '/sw.js')) {
-    res.setHeader('Content-Type', 'text/javascript; charset=UTF-8');
-    const file = getAsset('./.next/sw.js');
-    return send(res, 200, file);
+    if (existsSync('./.next/sw.js')) {
+      res.setHeader('Content-Type', 'text/javascript; charset=UTF-8');
+      const file = getAsset('./.next/sw.js');
+      return send(res, 200, file);
+    }
   }
-
-  // To handle queries/params:
-  // const { query } = parsedUrl;
-  // if (match(req, '/a')) {
-  //   return app.render(req, res, '/b', query);
-  // } else if (match(req, '/b')) {
-  //   return app.render(req, res, '/a', query);
-  // }
 
   return handle(req, res, parsedUrl);
 });
