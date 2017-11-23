@@ -1,41 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { fontSize, fontWeight } from 'styled-system';
 
-const Heading = props => (
-  <h1 className={'page' in props && 'page'}>
-    {props.children}
-    <style jsx>{`
-      h1 {
-        font-size: 2.25rem;
-        font-weight: 700;
-        letter-spacing: -.05em;
-      }
+const H1 = styled.h1`
+  ${fontSize}
+  ${fontWeight}
+  letter-spacing: -.05em;
+  line-height: ${props => props.page ? 1.25 : 1.15}
+`;
 
-      .page {
-        line-height: 1.25;
-      }
-
-      @media (max-width: 60em) and (min-width: 30em) {
-        h1 {
-          font-size: 3rem;
-        }
-      }
-
-      @media (min-width: 60em) {
-        h1 {
-          font-size: 6rem;
-        }
-
-        .page {
-          font-size: 3rem;
-        }
-      }
-    `}</style>
-  </h1>
+const Heading = ({ page, children }) => (
+  <H1
+    page={page}
+    fontWeight="bold"
+    fontSize={page ? [5, 6] : [5, 6, 96]}
+  >
+    {children}
+  </H1>
 );
 
 Heading.propTypes = {
   children: PropTypes.node.isRequired,
+  page: PropTypes.bool,
+};
+
+Heading.defaultProps = {
+  page: false,
 };
 
 export default Heading;
