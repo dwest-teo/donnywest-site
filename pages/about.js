@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import pageWrapper from '../components/hocs/page-wrapper';
 import App from '../components/app';
 import PageHead from '../components/app/page-head';
 import simDb from '../components/sim-db';
@@ -51,4 +52,4 @@ About.defaultProps = {
   isLoading: true,
 };
 
-export default About;
+export default pageWrapper(About);
