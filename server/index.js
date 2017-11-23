@@ -15,7 +15,8 @@ const server = micro(async (req, res) => {
 
   res.setHeader('Vary', 'Accept-Encoding');
 
-  if (!dev && match(req, '/sw.js')) {
+  // need to test if file exists here
+  if (match(req, '/sw.js')) {
     res.setHeader('Content-Type', 'text/javascript; charset=UTF-8');
     const file = getAsset('./.next/sw.js');
     return send(res, 200, file);
