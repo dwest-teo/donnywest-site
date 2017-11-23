@@ -14,14 +14,14 @@ const port = parseInt(process.env.PORT, 10) || 4000;
 const server = micro(async (req, res) => {
   const parsedUrl = parse(req.url, true);
 
+  // Set 'Vary' header
   res.setHeader('Vary', 'Accept-Encoding');
 
-  if (match(req, '/sw.js')) {
-    if (existsSync('./.next/sw.js')) {
-      res.setHeader('Content-Type', 'text/javascript; charset=UTF-8');
-      const file = getAsset('./.next/sw.js');
-      return send(res, 200, file);
-    }
+  // ServiceWorker
+  if (match(req, '/sw.js') && existsSync('./.next/sw.js')) {
+    res.setHeader('Content-Type', 'text/javascript; charset=UTF-8');
+    const file = getAsset('./.next/sw.js');
+    return send(res, 200, file);
   }
 
   return handle(req, res, parsedUrl);

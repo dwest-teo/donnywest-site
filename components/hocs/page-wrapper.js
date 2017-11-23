@@ -20,10 +20,6 @@ const pageWrapper = Page => class extends Component {
         if (reg.installing) {
           console.log('Installing new ServiceWorker');
         }
-
-        if (reg.active) {
-          console.log('ServiceWoker activated with scope: ', reg.scope);
-        }
       })
       .catch(err => {
         console.error('ServiceWorker registration failed', err.message);
