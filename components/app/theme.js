@@ -5,6 +5,7 @@ const theme = {
     blue: '#357EDD',
     darkGray: '#555',
     lightGray: '#777',
+    extraLightGray: '#aaa',
     black: '#333',
     darkBorder: 'rgba(0,0,0,.1)',
   },

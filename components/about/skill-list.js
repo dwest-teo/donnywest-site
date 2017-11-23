@@ -1,55 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  ListContainer,
+  TitleItem,
+  ListTitle,
+  Item,
+  ItemName,
+} from './components';
 
 const SkillList = ({ list }) => (
-  <ul>
-    <li className="title"><strong>{list.title}</strong></li>
+  <ListContainer
+    p={0}
+    mt={3}
+    mb={48}
+    color="darkGray"
+  >
+    <TitleItem
+      my={1}
+      mx={0}
+    >
+      <ListTitle
+        color="extraLightGray"
+        fontWeight="bold"
+      >
+        {list.title}
+      </ListTitle>
+    </TitleItem>
     {list.items.map(item => (
-      <li key={item.replace(/\s/g, '')} className="item"><small>{item}</small></li>
+      <Item
+        key={item.replace(/\s/g, '')}
+        width={[1, 1 / 2]}
+      >
+        <ItemName>
+          {item}
+        </ItemName>
+      </Item>
     ))}
-
-    <style jsx>{`
-      ul {
-        max-width: 34em;
-        margin: 2rem 0 3rem;
-        padding: 0;
-        list-style-type: none;
-        color: #555;
-      }
-
-      ul:before,
-      ul:after {
-        content: " ";
-        display: table;
-        clear: both;
-      }
-
-      small,
-      strong {
-        font-size: 80%;
-      }
-
-      strong {
-        color: #aaa;
-        text-transform: uppercase;
-        letter-spacing: .1em;
-        font-weight: 700;
-      }
-
-      .title {
-        display: block;
-        margin: .25rem 0;
-      }
-
-      @media (min-width: 30em) {
-        .item {
-          width: 50%;
-          display: inline;
-          float: left;
-        }
-      }
-    `}</style>
-  </ul>
+  </ListContainer>
 );
 
 SkillList.propTypes = {
