@@ -15,7 +15,7 @@ const Header = ({ component }) => (
   >
     <Anchor
       prefetch
-      route="index"
+      href="/"
       active={component === 'home'}
     >
       <Name color="darkGray" fontWeight="bold">
@@ -28,7 +28,7 @@ const Header = ({ component }) => (
     <LinkContainer flex="1 1 auto" align="right">
       <Anchor
         prefetch
-        route="about"
+        href="/about"
         nav
         active={component === 'about'}
       >
@@ -36,7 +36,7 @@ const Header = ({ component }) => (
       </Anchor>
       <Anchor
         prefetch
-        route="projects"
+        href="/projects"
         nav
         active={component === 'projects'}
       >

@@ -1,36 +1,38 @@
-const LRUCache = require('lru-cache');
-const routes = require('../routes');
+// update to work with micro and without next-routes
 
-const ssrCache = new LRUCache({
-  max: 100,
-  // 1 hour
-  maxAge: 1000 * 60 * 60,
-});
+// const LRUCache = require('lru-cache');
+// const routes = require('../routes');
 
-function getCacheKey(req) {
-  return `${req.url}`;
-}
+// const ssrCache = new LRUCache({
+//   max: 100,
+//   // 1 hour
+//   maxAge: 1000 * 60 * 60,
+// });
 
-function cache(app) {
-  return (req, res, next) => {
-    res.setHeader('Vary', 'Accept-Encoding');
-    const key = getCacheKey(req);
+// function getCacheKey(req) {
+//   return `${req.url}`;
+// }
 
-    if (!app.dev && ssrCache.has(key)) {
-      res.send(ssrCache.get(key));
-    } else {
-      const { route, params } = routes.match(req.url);
+// function cache(app) {
+//   return (req, res, next) => {
+//     res.setHeader('Vary', 'Accept-Encoding');
+//     const key = getCacheKey(req);
 
-      if (!route || req.url === '/__webpack_hmr') {
-        next();
-      } else {
-        app.renderToHTML(req, res, route.page, params).then(html => {
-          ssrCache.set(key, html);
-          res.send(html);
-        }).catch(err => app.renderError(err, req, res, route.page, params));
-      }
-    }
-  };
-}
+//     if (!app.dev && ssrCache.has(key)) {
+//       res.send(ssrCache.get(key));
+//     } else {
+//       const { route, params } = routes.match(req.url);
 
-module.exports = cache;
+//       if (!route || req.url === '/__webpack_hmr') {
+//         next();
+//       } else {
+//         app.renderToHTML(req, res, route.page, params).then(html => {
+//           ssrCache.set(key, html);
+//           res.send(html);
+//         }).catch(err => app.renderError(err, req, res, route.page, params));
+//       }
+//     }
+//   };
+// }
+
+// module.exports = cache;
