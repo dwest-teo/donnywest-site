@@ -3,7 +3,13 @@ import Icon from '../icons/';
 
 const Footer = () => (
   <footer>
-    <a className="email-link" href="mailto:donny@most.toys">hello@donnywest.com</a>
+    <a
+      href="https://twitter.com/donnyblaze1"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Icon name="twitter" />
+    </a>
     <a
       href="https://www.linkedin.com/in/donnywest"
       target="_blank"
@@ -17,20 +23,6 @@ const Footer = () => (
       rel="noopener noreferrer"
     >
       <Icon name="github" />
-    </a>
-    <a
-      href="https://twitter.com/donnyblaze1"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Icon name="twitter" />
-    </a>
-    <a
-      href="https://plus.google.com/+DonnyWest"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Icon name="googleplus" />
     </a>
     <a
       href="https://stackoverflow.com/users/5535081/donny-west"

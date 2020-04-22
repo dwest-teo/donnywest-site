@@ -2,12 +2,12 @@ const simDb = {
   home: {
     component: 'home',
     heading: 'I\'m Donny West.',
-    text: 'I\'m a full-stack developer focused on building modern, performant, modular applications for the web and mobile.  I create solutions that solve problems for organizations and improve experiences for users.  Every day I try to leave the web a little faster, friendlier, and better than the way I found it.',
-    beforeLink: 'Currently, I\'m the lead front-end engineer at',
-    afterLink: 'based in Gainesville, FL.',
+    text: 'I\'m a full-stack developer focused on building modern & performant applications for the web and mobile.  I create solutions that solve problems for organizations and improve experiences for users.  Every day I try to leave the web a little faster, friendlier, and better than the way I found it.',
+    beforeLink: 'Currently, I\'m a lead software engineer at',
+    afterLink: 'based in Fort Lauderdale, FL.',
     link: {
-      href: 'https://www.theelegantoffice.com',
-      text: 'The Elegant Office,',
+      href: 'https://www.magicleap.com',
+      text: 'Magic Leap,',
     },
   },
   about: {
@@ -22,7 +22,7 @@ const simDb = {
           items: [
             'JavaScript (ES6+)',
             'Node.js',
-            'Ruby on Rails',
+            'React',
             'CSS/SASS/PostCSS',
             'Go',
             'UNIX/Linux/OSX',
